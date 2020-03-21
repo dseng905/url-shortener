@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/public/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>URL Shortener API</h1>
+  <h2>Overview</h2>
+  <p>This API converts any URL into a short URL by storing the URL into the database and assigning it an index.
+  The short URL will redirect to the user to the original URL. If no such URL exists, an error will occur.
+  Requests are handled by Express.js, and a NOSQL database is used to store URLs with MongoDB. </p>
+  <p>If we type a URL, in this case, <code>https://www.google.com</code>, it will send a POST request to store the URL and create an short URL with an assigned counter.
+    The short URL would be look like this: <a href="/api/shorturl/1/" target="_blank"><code>[url]/api/shorturl/1/</code>.</a>
+  </p>
+  <p>Try it out! Type in a valid URL in the input box below and submit it.</p>
+  <form action="/api/shorturl/new" method="post">
+    <label for="url">Type in a valid URL: </label>
+    <input for="url" type="text" name="url">
+    <input type="submit" value="Get Short URL">
+  </form>
+</body>
+</html>
