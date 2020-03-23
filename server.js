@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 const URLMethods = require('./controllers/urlmethods.js');
 
-const mongoURI = "mongodb+srv://dseng905:10801566@cluster0-jnimq.mongodb.net/test?retryWrites=true&w=majority";
+const mongoURI = "ADD URI OF MONGO DATABASE HERE";
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(cors());
